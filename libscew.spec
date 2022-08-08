@@ -30,6 +30,7 @@ Source0:        https://github.com/aconchillo/scew/archive/1.2.0.tar.gz
 BuildRoot:      %{_tmppath}/scew-%{version}-build
 BuildRequires:  expat-devel
 BuildRequires:  pkg-config
+BuildRequires:  libtool
 
 %description
 SCEW provides an easy interface around the Expat XML parser, as well
