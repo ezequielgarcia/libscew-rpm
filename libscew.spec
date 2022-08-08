@@ -64,6 +64,7 @@ This subpackage contains the development headers for SCEW.
 %setup -qn scew-%version
 
 %build
+[ -f configure ] || ./autogen.sh
 %configure --disable-static
 make %{?_smp_mflags}
 
