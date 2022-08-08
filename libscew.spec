@@ -17,7 +17,6 @@
 
 
 Name:           libscew
-%define lname	libscew1
 Version:        1.2.0
 Release:        0
 Url:            https://nongnu.org/scew/
@@ -38,20 +37,9 @@ as a simple interface for creating new XML documents. It provides
 functions to load and access XML elements without the need to create
 Expat event handling routines.
 
-%package -n libscew1
-Summary:        Simple C Expat Wrapper library
-Group:          System/Libraries
-
-%description -n libscew1
-SCEW provides an easy interface around the Expat XML parser, as well
-as a simple interface for creating new XML documents. It provides
-functions to load and access XML elements without the need to create
-Expat event handling routines.
-
 %package devel
 Summary:        Development files for the Simple C Expat Wrapper library
 Group:          Development/Libraries/C and C++
-Requires:       %lname = %version
 
 %description devel
 SCEW provides an easy interface around the Expat XML parser, as well
@@ -73,18 +61,19 @@ make %{?_smp_mflags}
 %make_install
 rm -f %{buildroot}/%{_libdir}/libscew.la
 
-%post   -n %lname -p /sbin/ldconfig
-%postun -n %lname -p /sbin/ldconfig
+%post -p /sbin/ldconfig
 
-%files -n %lname
+%postun -p /sbin/ldconfig
+
+%files
 %defattr(-, root, root)
-%{_libdir}/libscew.so.*
+%{_libdir}/*.so.*
 
 %files devel
 %defattr(-, root, root)
 %{_includedir}/*
-%{_libdir}/libscew.so
-%{_libdir}/pkgconfig/scew.pc
+%{_libdir}/*.so
+%{_libdir}/pkgconfig/*
 
 %changelog
 
