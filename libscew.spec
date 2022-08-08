@@ -26,7 +26,7 @@ License:        LGPL-2.1+
 Group:          Development/Libraries/C and C++
 
 #Git-Clone:	git://git.savannah.nongnu.org/scew
-Source:         http://savannah.nongnu.org/download/scew/scew-%version.tar.gz
+Source:         https://savannah.nongnu.org/download/scew/scew-%version.tar.gz
 BuildRoot:      %{_tmppath}/scew-%{version}-build
 BuildRequires:  expat-devel
 BuildRequires:  pkg-config
