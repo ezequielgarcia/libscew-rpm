@@ -20,13 +20,13 @@ Name:           libscew
 %define lname	libscew1
 Version:        1.2.0
 Release:        0
-Url:            http://nongnu.org/scew/
+Url:            https://nongnu.org/scew/
 Summary:        Simple C Expat Wrapper
 License:        LGPL-2.1+
 Group:          Development/Libraries/C and C++
 
 #Git-Clone:	git://git.savannah.nongnu.org/scew
-Source:         https://savannah.nongnu.org/download/scew/scew-%version.tar.gz
+Source0:        https://github.com/aconchillo/scew/archive/1.2.0.tar.gz
 BuildRoot:      %{_tmppath}/scew-%{version}-build
 BuildRequires:  expat-devel
 BuildRequires:  pkg-config
